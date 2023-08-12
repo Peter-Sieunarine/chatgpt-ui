@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trips Builder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="script.js"></script> 
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+<body onload="generateRequest('version')">
+
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>OpenAI ChatGPT Interface</h1>
+</div>
+ 
+<div class="container-fluid mt-5">
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Input Parameters</h3>    
+        </div>
+     
+    </div>
+
+<!--spacer-->
+    <div class="row">
+        <div class="col-sm-12">&nbsp;</div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6" >
+
+<!-- Request Textarea -->            
+            <label for="request" class="form-label">Request:</label>
+            <textarea class="form-control form-control-sm" id="request" rows="3" style="font-size: .75rem;"></textarea>
+            <br />            
+            <input class="form-control" id="apikey" name="apikey" type="password" placeholder="API Key" style="border:1px solid blue;">
+                
+        </div>
+
+<!-- User Input/Support Data: Textarea -->        
+        <div class="col-sm-6" >
+
+            <label for="user_input" class="form-label">User Input/Support Data:</label>
+            <textarea class="form-control form-control-sm" id="user_input" rows="7" style="font-size: .75rem;"></textarea>
+
+        </div>
+    </div>
+
+<!--spacer-->
+    <div class="row">
+        <div class="col-sm-12">&nbsp;</div>
+    </div>
+
+<!-- Submit Request -->       
+    <div class="row">
+
+        <div class="col-sm-7">
+            <button type="button" class="btn btn-primary" id="btnSubmitRequest" onclick="submitRequest()">Submit Request >></button>    
+        </div>        
+
+    </div>
+</div>
+<!-- Response/Results -->    
+<div class="container-fluid mt-5 bg-light">
+
+    <div class="row">      
+        <div class="col-sm-6">
+            <h3>Response</h3>    
+        </div>
+  
+    </div>   
+    
+    <div class="row">
+        <div class="col-sm-12">
+            <textarea class="form-control form-control-sm" id="textarea_response" rows="10" style="font-size: .75rem;"></textarea>
+        </div>
+    </div>
+</div>
+
+<!--spacer-->
+<div class="row">
+    <div class="col-sm-12">&nbsp;</div>
+</div>
+
+</body>
+</html>
