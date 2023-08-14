@@ -53,6 +53,7 @@ async function submitRequest() {
         resultMessage = jsonResults.choices[0].message.content;
         
         //document.getElementById("textarea_response_formatted").innerHTML = resultMessage;//JSON.stringify(jsonResults);
+        console.log(jsonResults)
         document.getElementById("textarea_response").value = resultMessage;
     }
 
